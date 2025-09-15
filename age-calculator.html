@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age Calculator - Marth Systems</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #fff;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            color: #ff6600;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff0055;
+        }
+
+        .calc-box {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin: 20px 0 5px;
+            font-weight: bold;
+        }
+
+        select,
+        input[type="date"] {
+            padding: 8px;
+            width: 100%;
+            max-width: 300px;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .result {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f1f1f1;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Marth Systems</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Tools</a>
+            <a href="#">Blog</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>🧮 Age Calculator</h2>
+        <div class="calc-box">
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" />
+
+            <label for="ageDate">Age at the Date of:</label>
+            <input type="date" id="ageDate" value="" />
+
+            <button onclick="calculateAge()">Calculate</button>
+
+            <div class="result" id="result"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Marth Systems. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Set today's date as default for "age at the date of"
+        document.getElementById('ageDate').valueAsDate = new Date();
+
+        function calculateAge() {
+            const dobInput = document.getElementById("dob").value;
+            const ageDateInput = document.getElementById("ageDate").value;
+
+            if (!dobInput || !ageDateInput) {
+                document.getElementById("result").innerText = "Please select both dates.";
+                return;
+            }
+
+            const dob = new Date(dobInput);
+            const ageDate = new Date(ageDateInput);
+
+            if (dob > ageDate) {
+                document.getElementById("result").innerText = "Birth date cannot be after the comparison date.";
+                return;
+            }
+
+            let years = ageDate.getFullYear() - dob.getFullYear();
+            let months = ageDate.getMonth() - dob.getMonth();
+            let days = ageDate.getDate() - dob.getDate();
+
+            if (days < 0) {
+                months--;
+                const prevMonth = new Date(ageDate.getFullYear(), ageDate.getMonth(), 0);
+                days += prevMonth.getDate();
+            }
+
+            if (months < 0) {
+                years--;
+                months += 12;
+            }
+
+            document.getElementById("result").innerText =
+                `Age: ${years} year(s), ${months} month(s), and ${days} day(s)`;
+        }
+    </script>
+</body>
+
+</html>
