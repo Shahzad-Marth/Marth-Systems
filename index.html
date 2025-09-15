@@ -1,289 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Age Calculator - Marth Systems</title>
-  <meta name="description" content="Calculate your age in years, months, days, weeks, hours, minutes, and seconds using Marth Systems' free online age calculator.">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marth Systems - Free Online Tools</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #fff;
+            color: #333;
+        }
 
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 50px;
-      background-color: #f8f8f8;
-      border-bottom: 1px solid #ddd;
-    }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+        }
 
-    header h1 {
-      color: #ff6600;
-    }
+        header h1 {
+            color: #ff6600;
+        }
 
-    nav a {
-      margin: 0 15px;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
 
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 20px;
-    }
+        .hero {
+            text-align: center;
+            padding: 70px 20px;
+        }
 
-    h1, h2 {
-      color: #004085;
-      text-align: center;
-    }
+        .hero h2 {
+            font-size: 40px;
+            font-weight: bold;
+            color: #ff0055;
+        }
 
-    .result-box {
-      background-color: #e9f5e9;
-      padding: 20px;
-      border-left: 6px solid #28a745;
-      margin-bottom: 30px;
-      font-size: 18px;
-    }
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
 
-    .form-section {
-      background-color: #f9f9f9;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    }
+        .tools-section {
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-    label {
-      font-weight: bold;
-      display: block;
-      margin: 20px 0 10px;
-    }
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-    select {
-      padding: 8px;
-      font-size: 16px;
-      margin-right: 10px;
-    }
+        .tool-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+        }
 
-    .date-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 10px;
-    }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
 
-    button {
-      background-color: #4caf50;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
+        .tool-card h3 {
+            color: #222;
+            margin-bottom: 10px;
+        }
 
-    button:hover {
-      background-color: #45a049;
-    }
-
-    .footer {
-      text-align: center;
-      padding: 30px;
-      background: #f1f1f1;
-      margin-top: 50px;
-    }
-  </style>
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f1f1f1;
+            margin-top: 50px;
+        }
+    </style>
 </head>
+
 <body>
 
-  <header>
-    <h1>Marth Systems</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="tools.html">Tools</a>
-      <a href="blog.html">Blog</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-  </header>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: inherit;">Marth Systems</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tools.html">Tools</a>
+            <a href="blog/age-calculator.html">Blog</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
 
-  <main>
-    <h1>🧮 Age Calculator</h1>
+    <section class="hero">
+        <h2>Free Online Tools for Everyone</h2>
+        <p>Simple, fast, and reliable tools like Age Calculator, Paraphraser, Cricinfo & more!</p>
+    </section>
 
-    <div class="result-box" id="output" style="display: none;"></div>
+    <section class="tools-section">
+        <h2>Popular Tools</h2>
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3> <a href="age-calculator.html" style="text-decoration: none; color: inherit;">🧮 Age Calculator</a></a></h3>
+                <p>Quickly calculate your exact age in years, months, and days.</p>
+            </div>
+            <div class="tool-card">
+                <h3>✍️ Paraphrasing Tool</h3>
+                <p>Rephrase sentences instantly with our smart AI tool.</p>
+            </div>
+            <div class="tool-card">
+                <h3>🏏 Cricinfo Live</h3>
+                <p>Stay updated with live cricket scores and match updates.</p>
+            </div>
+            <div class="tool-card">
+                <h3>🔢 Number Converter</h3>
+                <p>Convert between binary, decimal, and hexadecimal formats.</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="form-section">
-      <label>Date of Birth:</label>
-      <div class="date-row">
-        <select id="dobMonth">
-          <script>
-            const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-            monthNames.forEach((month, i) => {
-              document.write(`<option value="${i}">${month}</option>`);
-            });
-          </script>
-        </select>
-        <select id="dobDay"></select>
-        <select id="dobYear"></select>
-      </div>
+    <footer class="footer">
+        <p>© 2025 Marth Systems. All rights reserved.</p>
+    </footer>
 
-      <label>Age at the Date of:</label>
-      <div class="date-row">
-        <select id="refMonth"></select>
-        <select id="refDay"></select>
-        <select id="refYear"></select>
-      </div>
-
-      <button onclick="calculateAge()">Calculate</button>
-    </div>
-<section style="margin-top: 50px;">
-  <h2>What is an Age Calculator?</h2>
-  <p>
-    An age calculator is a simple online tool that determines the exact age between two given dates.
-    Whether you're calculating your current age or the age of someone else on a specific date, this tool
-    provides an accurate breakdown in years, months, days, weeks, hours, minutes, and even seconds.
-  </p>
-
-  <h2>Why Use Marth Systems' Age Calculator?</h2>
-  <ul>
-    <li>✔️ Fast and easy-to-use interface</li>
-    <li>✔️ Detailed output including weeks, hours, and seconds</li>
-    <li>✔️ Works on all devices — mobile, tablet, desktop</li>
-    <li>✔️ No signup or personal data required</li>
-  </ul>
-
-  <h2>How to Use This Age Calculator</h2>
-  <ol>
-    <li>Select the person's date of birth from the dropdowns.</li>
-    <li>Select the date you want to calculate the age at (defaults to today).</li>
-    <li>Click on the <strong>Calculate</strong> button to see a full breakdown of the age.</li>
-  </ol>
-
-  <h2>Common Uses</h2>
-  <p>This tool is useful for:</p>
-  <ul>
-    <li>🎂 Finding your exact age</li>
-    <li>📆 Calculating age for school or job applications</li>
-    <li>🧾 Legal and documentation purposes</li>
-    <li>🧮 Fun facts like "how many seconds old are you?"</li>
-  </ul>
-
-  <h2>FAQs</h2>
-  <p><strong>Q: Can I calculate age in the future?</strong><br>
-  A: Yes! Simply choose a future date in the second field to see how old you'll be then.</p>
-
-  <p><strong>Q: Can I use this to calculate someone's past age?</strong><br>
-  A: Absolutely. Just pick a past date in the second field.</p>
-
-  <p><strong>Q: Is this calculator free?</strong><br>
-  A: Yes, it’s 100% free with no limitations.</p>
-</section>
-
-
-
-  </main>
-
-  <footer class="footer">
-    <p>© 2025 Marth Systems. All rights reserved.</p>
-  </footer>
-
-  <script>
-    function populateDays(selectId) {
-      const select = document.getElementById(selectId);
-      select.innerHTML = '';
-      for (let d = 1; d <= 31; d++) {
-        select.innerHTML += `<option value="${d}">${d}</option>`;
-      }
-    }
-
-    function populateYears(selectId, start, end) {
-      const select = document.getElementById(selectId);
-      for (let y = end; y >= start; y--) {
-        select.innerHTML += `<option value="${y}">${y}</option>`;
-      }
-    }
-
-    // Initial population
-    populateDays("dobDay");
-    populateDays("refDay");
-    populateYears("dobYear", 1900, new Date().getFullYear());
-    populateYears("refYear", 1900, new Date().getFullYear() + 50);
-
-    const now = new Date();
-    document.getElementById("dobMonth").value = 0;
-    document.getElementById("dobDay").value = 1;
-    document.getElementById("dobYear").value = 2000;
-
-    document.getElementById("refMonth").innerHTML = document.getElementById("dobMonth").innerHTML;
-    document.getElementById("refMonth").value = now.getMonth();
-    document.getElementById("refDay").value = now.getDate();
-    document.getElementById("refYear").value = now.getFullYear();
-
-    function calculateAge() {
-      const dob = new Date(
-        document.getElementById("dobYear").value,
-        document.getElementById("dobMonth").value,
-        document.getElementById("dobDay").value
-      );
-
-      const refDate = new Date(
-        document.getElementById("refYear").value,
-        document.getElementById("refMonth").value,
-        document.getElementById("refDay").value
-      );
-
-      if (dob > refDate) {
-        document.getElementById("output").style.display = 'block';
-        document.getElementById("output").innerHTML = "⚠️ Birth date cannot be after the reference date.";
-        return;
-      }
-
-      let years = refDate.getFullYear() - dob.getFullYear();
-      let months = refDate.getMonth() - dob.getMonth();
-      let days = refDate.getDate() - dob.getDate();
-
-      if (days < 0) {
-        months--;
-        const prevMonth = new Date(refDate.getFullYear(), refDate.getMonth(), 0);
-        days += prevMonth.getDate();
-      }
-
-      if (months < 0) {
-        years--;
-        months += 12;
-      }
-
-      const diffMs = refDate - dob;
-      const totalDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-      const weeks = Math.floor(totalDays / 7);
-      const totalMonths = years * 12 + months;
-      const hours = totalDays * 24;
-      const minutes = hours * 60;
-      const seconds = minutes * 60;
-
-      const output = `
-        <strong>Age:</strong><br><br>
-        ${years} years ${months} months ${days} days<br>
-        or ${totalMonths} months ${days} days<br>
-        or ${weeks} weeks ${totalDays % 7} days<br>
-        or ${totalDays.toLocaleString()} days<br>
-        or ${hours.toLocaleString()} hours<br>
-        or ${minutes.toLocaleString()} minutes<br>
-        or ${seconds.toLocaleString()} seconds
-      `;
-
-      const resultBox = document.getElementById("output");
-      resultBox.style.display = 'block';
-      resultBox.innerHTML = output;
-    }
-  </script>
 </body>
+
 </html>

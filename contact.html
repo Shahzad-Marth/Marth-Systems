@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - Marth Systems</title>
+    <meta name="description"
+        content="Get in touch with Marth Systems. Contact us for support, feedback, business inquiries, or collaboration opportunities.">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fff;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background-color: #f8f8f8;
+            border-bottom: 1px solid #ddd;
+        }
+
+        header h1 {
+            color: #ff6600;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #004085;
+            text-align: center;
+        }
+
+        .contact-section {
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin: 15px 0 8px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .info {
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            background: #f1f1f1;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: inherit;">Marth Systems</a></h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="tools.html">Tools</a>
+            <a href="blog.html">Blog</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>📩 Contact Us</h1>
+        <p style="text-align: center; max-width: 700px; margin: 20px auto;">
+            Have questions, feedback, or partnership inquiries? We’d love to hear from you!
+            Use the form below or reach out to us directly.
+        </p>
+
+        <div class="contact-section">
+            <form action="mailto:marthsystems@gmail.com" method="post" enctype="text/plain">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" name="subject" placeholder="Message subject" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="info">
+            <h2>Other Ways to Reach Us</h2>
+            <p><strong>Email:</strong> marthsystems@gmail.com</p>
+            <p><strong>Business Hours:</strong> Mon - Fri, 9:00 AM - 6:00 PM</p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Marth Systems. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
