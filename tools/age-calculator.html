@@ -7,6 +7,9 @@
     <title>Age Calculator - Marth Systems</title>
     <meta name="description"
         content="Calculate your age in years, months, days, weeks, hours, minutes, and seconds using Marth Systems' free online age calculator.">
+    
+    <link rel="stylesheet" href="css/mobile-navbar.css">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -110,6 +113,9 @@
 
     <header>
         <h1><a href="index.html" style="text-decoration: none; color: inherit;">Marth Systems</a></h1>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
@@ -288,6 +294,14 @@
             resultBox.innerHTML = output;
         }
     </script>
+
+
+<script>
+    function toggleMenu() {
+        document.getElementById("navMenu").classList.toggle("active");
+    }
+</script>
+
 </body>
 
 </html>

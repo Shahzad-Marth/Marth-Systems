@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marth Systems - Free Online Tools</title>
+
+    <link rel="stylesheet" href="css/mobile-navbar.css">
+
     <style>
         body {
             margin: 0;
@@ -90,6 +93,9 @@
 
     <header>
         <h1><a href="index.html" style="text-decoration: none; color: inherit;">Marth Systems</a></h1>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="blog/age-calculator.html">Blog</a>
@@ -128,6 +134,12 @@
     <footer class="footer">
         <p>© 2025 Marth Systems. All rights reserved.</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
 
 </body>
 

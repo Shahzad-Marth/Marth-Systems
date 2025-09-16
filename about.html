@@ -7,6 +7,10 @@
     <title>About Us - Marth Systems</title>
     <meta name="description"
         content="Learn about Marth Systems, our mission, and our journey in building free online tools such as age calculators, paraphrasers, and more to simplify your digital life.">
+    
+    <link rel="stylesheet" href="css/mobile-navbar.css">
+
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -74,6 +78,9 @@
 
     <header>
         <h1><a href="index.html" style="text-decoration: none; color: inherit;">Marth Systems</a></h1>
+
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+
         <nav>
             <a href="index.html">Home</a>
             <a href="blog.html">Blog</a>
@@ -129,6 +136,14 @@
     <footer class="footer">
         <p>© 2025 Marth Systems. All rights reserved.</p>
     </footer>
+
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navMenu").classList.toggle("active");
+        }
+    </script>
+
 </body>
 
 </html>
